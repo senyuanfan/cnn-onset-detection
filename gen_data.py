@@ -3,6 +3,9 @@ import os
 import librosa
 import torch
 
+# dangerous solution
+os.environ['KMP_DUPLICATE_LIB_OK']='True' 
+
 #function to zero pad ends of spectrogram
 def zeropad2d(x,n_frames):
 	y=np.hstack((np.zeros([x.shape[0],n_frames]), x))
