@@ -1,4 +1,7 @@
 /dataset
 /data_pt_test
+/data_pt_inference
 .DS_Store
 **/.DS_Store
+.wav
+.flac

@@ -16,9 +16,11 @@ Adapted by Senyuan Fan and Emily Kuo for Transient Detection
 * Can be obtained from project google drive folder
 ## Usage
 ### CHANGE WHEN RUN IN WINDOWS:
+
 **datadir in windows:**
 datadir ='./data_pt_test\\' 
-**daddir in MAC**
+
+**datadir in MAC**
 datadir ='./data_pt_test/' 
 
 ### Train the network
