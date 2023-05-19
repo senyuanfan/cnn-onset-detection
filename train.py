@@ -6,7 +6,13 @@ from utils import onsetCNN, Dataset
 import numpy as np
 import matplotlib.pyplot as plt
 
+import os
+
 if __name__ == '__main__':
+
+	# dangerous solution
+	os.environ['KMP_DUPLICATE_LIB_OK']='True' 
+
 #function to repeat positive samples to improve data balance
 	def balance_data(ids, labels):
 		ids2add=[]
