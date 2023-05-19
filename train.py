@@ -104,12 +104,12 @@ if __name__ == '__main__':
 		##training
 		n_train=0
 
-		counter = 0
+		# counter = 0
 
 		for local_batch, local_labels, local_weights in training_generator:
 
-			counter+=1
-			print('batch count: ', counter)
+			# counter+=1
+			# print('batch count: ', counter)
 
 			n_train+=local_batch.shape[0]
 			
