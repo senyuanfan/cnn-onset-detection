@@ -23,8 +23,8 @@ if __name__ == '__main__':
 	
 
 	#parameters for data loader
-	params = {'batch_size': 256,'shuffle': True,'num_workers': 6}
-	max_epochs = 50
+	params = {'batch_size': 256,'shuffle': True,'num_workers': 8}
+	max_epochs = 20
 
 	# data
 	datadir='./data_pt_test\\'
@@ -156,4 +156,5 @@ if __name__ == '__main__':
 	plt.legend()
 	plt.savefig('./plots/loss_curves_%d'%fold)
 	plt.clf()
-	torch.save(model.state_dict(), 'saved_model_%d.pt'%fold)
+	# torch.save(model.state_dict(), 'saved_model_%d.pt'%fold)
+	torch.save(model.state_dict(), 'saved_model_test.pt')
