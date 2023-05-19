@@ -15,6 +15,11 @@ Adapted by Senyuan Fan and Emily Kuo for Transient Detection
 ## Dataset (used in the paper)
 * Can be obtained from project google drive folder
 ## Usage
+### CHANGE WHEN RUN IN WINDOWS:
+**datadir in windows:**
+datadir ='./data_pt_test\\' 
+**daddir in MAC**
+datadir ='./data_pt_test/' 
 
 ### Train the network
 1. Run <code>gen_songlist.py</code> to get the list of all songs for which there is onset annotation data available(there are some extra audios in the dataset)
