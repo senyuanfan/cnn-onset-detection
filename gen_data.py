@@ -17,9 +17,9 @@ def makechunks(x,duration):
 	return y
 
 #data dirs
-audio_dir='/media/Sharedata/rohit/SS_onset_detection/audio'
-onset_dir='/media/Sharedata/rohit/SS_onset_detection/onsets'
-save_dir='/media/Sharedata/rohit/SS_onset_detection/data_pt_test'
+audio_dir='./dataset/audio'
+onset_dir='./dataset/onsets'
+save_dir='./data_pt_test'
 
 #data stats for normalization
 stats=np.load('means_stds.npy')
@@ -43,10 +43,11 @@ for item in songlist:
 	if not os.path.exists(os.path.join(onset_dir,item+'.onsets')): continue
 	onsets=np.loadtxt(os.path.join(onset_dir,item+'.onsets'))
 	
+	# update to melspectrogram new librosa syntax
 	#get mel spectrogram
-	melgram1=librosa.feature.melspectrogram(x,sr=fs,n_fft=1024, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
-	melgram2=librosa.feature.melspectrogram(x,sr=fs,n_fft=2048, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
-	melgram3=librosa.feature.melspectrogram(x,sr=fs,n_fft=4096, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
+	melgram1=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=1024, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
+	melgram2=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=2048, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
+	melgram3=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=4096, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
 	
 	#log scaling
 	melgram1=10*np.log10(1e-10+melgram1)

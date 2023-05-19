@@ -25,7 +25,7 @@ params = {'batch_size': 256,'shuffle': True,'num_workers': 6}
 max_epochs = 50
 
 #data
-datadir='/media/Sharedata/rohit/SS_onset_detection/data_pt/'
+datadir='./data_pt/'
 songlist=np.loadtxt('songlist.txt',dtype=str)
 labels = np.load('labels_master.npy').item()
 weights = np.load('weights_master.npy').item()

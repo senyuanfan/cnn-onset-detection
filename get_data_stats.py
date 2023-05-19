@@ -3,7 +3,7 @@ import os
 import librosa
 
 #data dir
-audio_dir='/media/Sharedata/rohit/SS_onset_detection/audio'
+audio_dir='./dataset/audio'
 
 #main
 songlist=np.loadtxt('songlist.txt',dtype=str)
@@ -17,9 +17,10 @@ for i_song in range(len(songlist)):
 	x,fs=librosa.load(os.path.join(audio_dir,songlist[i_song]+'.flac'), sr=44100)
 	
 	#get mel spectrogram
-	melgram1=librosa.feature.melspectrogram(x,sr=fs,n_fft=1024, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
-	melgram2=librosa.feature.melspectrogram(x,sr=fs,n_fft=2048, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
-	melgram3=librosa.feature.melspectrogram(x,sr=fs,n_fft=4096, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
+	#updated using the latest model
+	melgram1=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=1024, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
+	melgram2=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=2048, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
+	melgram3=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=4096, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
 	
 	#log scaling
 	melgram1=10*np.log10(1e-10+melgram1)
