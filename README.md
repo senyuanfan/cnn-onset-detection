@@ -3,7 +3,7 @@
 Pytorch implementation of the method described in: </br>
 Schlüter, Jan, and Sebastian Böck. "Improved musical onset detection with convolutional neural networks." 2014 ieee international conference on acoustics, speech and signal processing (icassp). IEEE, 2014.
 
-Adapted by Senyuan Fan and Emily Kuo for Transient Detection
+Modified by Senyuan Fan and Emily Kuo for Transient Detection
 
 
 ## Requirements
