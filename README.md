@@ -15,13 +15,18 @@ Modified by Senyuan Fan and Emily Kuo for Transient Detection
 ## Dataset (used in the paper)
 * Can be obtained from project google drive folder
 ## Usage
-### CHANGE WHEN RUN IN WINDOWS:
+### Change According to OS:
 
-**datadir in windows:**
+in <code>train.py<code> and <code>inference.ipynb<code>
+
+**in Windows:**
 datadir ='./data_pt_test\\' 
 
-**datadir in MAC**
+**in MAC**
 datadir ='./data_pt_test/' 
+
+**if omp issue pops up**
+conda install nomkl
 
 ### Train the network
 1. Run <code>gen_songlist.py</code> to get the list of all songs for which there is onset annotation data available(there are some extra audios in the dataset)
@@ -34,3 +39,6 @@ datadir ='./data_pt_test/'
 
 ### Load saved model
 If you wish to use the trained model on different data, <code>utils.py</code> contains the model class definition (and some other helper functions). Import the model class from here and load one of the saved model state dicts from the models folder.
+
+### Run Inference
+1. Run <code>inference.ipynb<code>

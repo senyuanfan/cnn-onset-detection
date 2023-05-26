@@ -4,7 +4,7 @@ import librosa
 import torch
 
 # dangerous solution
-os.environ['KMP_DUPLICATE_LIB_OK']='True' 
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 #function to zero pad ends of spectrogram
 def zeropad2d(x,n_frames):
