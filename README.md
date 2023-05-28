@@ -21,11 +21,11 @@ In <code>train.py</code> and <code>inference.ipynb</code>
 
 **Windows:**
 
-datadir ='./data_pt_test\\' 
+datadir ='./data_pt_test\\' or './data_pt_test_short\\'
 
 **OSX:**
 
-datadir ='./data_pt_test/' 
+datadir ='./data_pt_test/' or './data_pt_test_short/'
 
 **if omp issue pops up: **
 

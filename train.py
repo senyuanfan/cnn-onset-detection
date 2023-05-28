@@ -29,11 +29,11 @@ if __name__ == '__main__':
 	
 
 	#parameters for data loader
-	params = {'batch_size': 256,'shuffle': True,'num_workers': 8}
+	params = {'batch_size': 256,'shuffle': True,'num_workers': 16}
 	max_epochs = 20
 
 	# data
-	datadir='./data_pt_test\\'
+	datadir='./data_pt_test_short\\'
 	songlist=np.loadtxt('songlist.txt',dtype=str)
 
 	# ValueError: Object arrays cannot be loaded when allow_pickle=False, so need allow pickle
@@ -160,7 +160,8 @@ if __name__ == '__main__':
 	plt.plot(train_loss_epoch,label='train')
 	plt.plot(val_loss_epoch,label='val')
 	plt.legend()
-	plt.savefig('./plots/loss_curves_%d'%fold)
+	# plt.savefig('./plots/loss_curves_%d'%fold)
+	plt.savefig('./plots/loss_curves_test')
 	plt.clf()
 	# torch.save(model.state_dict(), 'saved_model_%d.pt'%fold)
 	torch.save(model.state_dict(), 'saved_model_test.pt')

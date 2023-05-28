@@ -21,6 +21,10 @@ for i_song in range(len(songlist)):
 	melgram1=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=1024, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
 	melgram2=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=2048, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
 	melgram3=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=4096, hop_length=441,n_mels=80, fmin=27.5, fmax=16000)
+
+	# melgram1=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=1024, hop_length=512, n_mels=80, fmin=27.5, fmax=16000)
+	# melgram2=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=2048, hop_length=512, n_mels=80, fmin=27.5, fmax=16000)
+	# melgram3=librosa.feature.melspectrogram(y=x,sr=fs,n_fft=4096, hop_length=512, n_mels=80, fmin=27.5, fmax=16000)
 	
 	#log scaling
 	melgram1=10*np.log10(1e-10+melgram1)
