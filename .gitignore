@@ -3,7 +3,7 @@
 /data_pt_inference
 .DS_Store
 **/.DS_Store
-.wav
-.flac
+*.wav
+*.flac
 *.npy
-.pt
+*.pt
