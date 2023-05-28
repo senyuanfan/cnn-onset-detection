@@ -17,15 +17,18 @@ Modified by Senyuan Fan and Emily Kuo for Transient Detection
 ## Usage
 ### Change According to OS:
 
-in <code>train.py<code> and <code>inference.ipynb<code>
+In <code>train.py</code> and <code>inference.ipynb</code>
 
-**in Windows:**
+**Windows:**
+
 datadir ='./data_pt_test\\' 
 
-**in MAC**
+**OSX:**
+
 datadir ='./data_pt_test/' 
 
-**if omp issue pops up**
+**if omp issue pops up: **
+
 conda install nomkl
 
 ### Train the network
@@ -41,4 +44,4 @@ conda install nomkl
 If you wish to use the trained model on different data, <code>utils.py</code> contains the model class definition (and some other helper functions). Import the model class from here and load one of the saved model state dicts from the models folder.
 
 ### Run Inference
-1. Run <code>inference.ipynb<code>
+1. Run <code>inference.ipynb</code>
