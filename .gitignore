@@ -2,6 +2,7 @@
 /data_pt_test
 /data_pt_inference
 /plots
+.ipynb_checkpoints/
 .DS_Store
 **/.DS_Store
 *.wav
