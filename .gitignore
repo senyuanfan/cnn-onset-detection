@@ -2,6 +2,7 @@
 /data_pt_test
 /data_pt_inference
 /plots
+__pycache__
 .ipynb_checkpoints/
 .DS_Store
 **/.DS_Store
